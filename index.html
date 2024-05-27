@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Patrol</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:#ffffff
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+header{
+    width: 100vw;
+    height: 100px;
+    border-bottom: solid 1px rgba(16, 16, 16, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    background-color: #dc3545;
+
+}
+
+header .inner{
+    width: 1300px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+header .logo{
+    display: table;
+    height: 100%;
+    float: left;
+}
+
+header .logo div{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header .logo img{
+    height: 50px;
+    margin-top: 5px;
+}
+
+header nav{
+    float: right;
+    height: 100%;
+}
+
+header nav span{
+    display: table;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+header nav span:last-of-type{
+    margin-right: 0;
+}
+
+header nav span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header nav a{
+    color: #FFF;
+}
+/* Content styles */
+.backgroungstuff {
+  outline: 1px solid;
+  margin: 20px;
+}
+
+.adoptadogprev {
+  width: 250px; /* Adjusted image width */
+  height: 250px; /* Adjusted image height */
+  margin: 20px; /* Equal spacing */
+  position: relative; /* Position relative for pseudo-elements */
+}
+
+.adoptadogprev::before,
+.adoptadogprev::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; /* Position the thicker border at the bottom */
+  width: 100%;
+  height: 4px; /* Thickness of the bottom border */
+  background-color: #dee2e6; /* Light border color */
+}
+
+.adoptadogprev::before {
+  top: -1px; /* Position the thinner border at the top */
+  height: 1px; /* Thickness of the top border */
+}
+
+.adoptadogprev img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px; /* Rounded corners */
+  position: relative;
+  
+}
+
+.center {
+  text-align: center;
+}
+
+.doginfo {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #212529; /* Dark text */
+}
+
+.content {
+  padding: 10px 18px;
+  overflow: hidden;
+  background-color: #ffffff; /* White background for description boxes */
+  font-size: 14px;
+  height: 80px;
+  margin-bottom: 20px; /* Add margin to the bottom of the description boxes */
+  border: 1px solid #dee2e6; /* Light border */
+}
+
+.content p {
+  margin: 0;
+  color: #495057; /* Dark text */
+}
+
+/* Button styles */
+.adopt-button,
+.buy-button {
+  background-color: #dc3545; /* Red button */
+  border: none;
+  color: #ffffff; /* White text */
+  padding: 8px 16px; /* Adjust padding for smaller size */
+  font-size: 14px; /* Adjust font size for smaller size */
+  border-radius: 50px; /* Fully rounded corners */
+  cursor: pointer;
+  margin: 10px 5px; /* Adjust margin to space out buttons */
+  display: inline-block; /* Ensure buttons are aligned inline */
+  text-align: center;
+}
+
+.adopt-button:hover,
+.buy-button:hover {
+  background-color: #c82333; /* Darken button on hover */
+}
+
+.yuh {
+   font-family: "Montserrat", sans-serif;
+   position: relative;
+   top: 100px;
+   left: 120px;
+   text-align: justify;
+   letter-spacing: 2px;
+}
+.pa {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  transition: 700ms ease;
+  margin-bottom: 0.8rem;
+  outline: none;
+}
+
+.pa:hover {
+  font-variation-settings: "wght" 582; 
+  letter-spacing: 1px;
+}
+.yuh2{
+    position: relative;
+    width: 50px;
+    left: 825px;
+    bottom: 325px;
+}
+
+.row{
+    position: relative;
+    bottom: 100px;
+    left: 75px;
+}
+
+    </style>
+
+    <script>
+
+    </script>
+
+</head>
+<body>
+  <header>
+    <div class="inner">
+        <div class="logo">
+            <div>
+                <a href="index.html"><img src="Images/finallogo.png" alt="logo"></a>
+            </div>
+        </div>
+
+        <nav>
+          <span><a href="cart.html">CART</a></span>
+          <span><a href="account.html">ACCOUNT</a></span>
+        </nav>
+    </div>
+</header>
+
+<div class="yuh">
+    <div class="pa">A b o u t U s</div>
+    <div class="pb"><br>At   PAW PATROL,  our mission is to connect loving families with their 
+            <br>perfect  canine companions.   We believe that every dog deserves  a 
+            <br>forever home,  and we're committed to making the adoption process 
+            <br>as seamless and enjoyable as possible.  Our user-friendly website is 
+            <br>designed to help you find,  adopt,  and  care for your new best friend.<br>
+
+            <br>Whether you're looking to adopt your first dog or adding to your pack, 
+            <br>PAW PATROL  is here to help  you find your perfect match. Explore  our 
+            <br>listings,   learn about the adoption process,   and become part  of  a 
+            <br>community  dedicated  to  making  a  difference, one  dog  at  a time.<br>
+
+            <br><i>Adopt. Love. Repeat. Welcome to PAW PATROL!</i>
+
+      <div class="yuh2">
+            <img src="Images/aboutus.png" alt="dogs" style="width:425px">
+      </div>
+    
+    </div>
+    </div>
+    
+        
+        <div class="row justify-content-center"> <!-- Adding justify-content-center to center the content -->
+            <table>
+                <tr>
+                    <td colspan="3"><h2>Cute Dogs</h2></td> <!-- Using colspan to span across all three columns -->
+                </tr>
+                <tr>
+                    <td>
+                        <img class="adoptadogprev" src="Images/1.jpg" alt="waldo">
+                        <br><br>
+                        <h1 class="center doginfo">Waldo | 225$</h1>
+                        <br>
+                        <div class="content">
+                            <p>It is watching me sleep, please take<br>him away from me.</p>
+                        </div>
+                        <br>
+                        <button onclick="AddToCart('Waldo', 225)" class="adopt-button">ADOPT!</button>
+                        <br>
+                    </td>
+                    <td>
+                        <img class="adoptadogprev" src="Images/2.png" alt="waldo">
+                        <br><br>
+                        <h1 class="center doginfo">Yolanda | 250$</h1>
+                        <br>
+                        <div class="content">
+                            <p>She is a young energetic pup, she<br>loves treats also.</p>
+                        </div>
+                        <br>
+                        <button onclick="AddToCart('Yolanda', 250)" class="adopt-button">ADOPT!</button>
+                        <br>
+                    </td>
+                    <td>
+                        <img class="adoptadogprev" src="Images/3.png" alt="waldo">
+                        <br><br>
+                        <h1 class="center doginfo">Sausagea | 175$</h1>
+                        <br>
+                        <div class="content">
+                            <p>This dog is very naughty, she is<br>always stealing food. smh!!</p>
+                        </div>
+                        <br>
+                        <button onclick="AddToCart('Sausagea', 175)" class="adopt-button">ADOPT!</button>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"><h2>Pet Supplies</h2></td> <!-- Using colspan to span across all three columns -->
+                </tr>
+                <tr>
+                    <td>
+                        <img class="adoptadogprev" src="Images/4.png" alt="waldo">
+                        <br><br>
+                        <h1 class="center doginfo">Dog Food | 55$</h1>
+                        <br>
+                        <div class="content">
+                            <p>Sponsored by official Pedigree! Very healthy for your dog.</p>
+                        </div>
+                        <br>
+                        <button onclick="AddToCart('Dog Food', 55)" class="buy-button">BUY!</button>
+                        <br>
+                    </td>
+                    <td>
+                        <img class="adoptadogprev" src="Images/5.png" alt="waldo">
+                        <br><br>
+                        <h1 class="center doginfo">Dog Collar | 75$</h1>
+                        <br>
+                        <div class="content">
+                            <p>A comfortable collar for your beloved dog.</p>
+                        </div>
+                        <br>
+                        <button onclick="AddToCart('Dog Collar', 75)" class="buy-button">BUY!</button>
+                        <br>
+                    </td>
+                    <td>
+                        <img class="adoptadogprev" src="Images/6.png" alt="waldo">
+                        <br><br>
+                        <h1 class="center doginfo">Dog Leash | 15$</h1>
+                        <br>
+                        <div class="content">
+                            <p>A durable leash for your playful pup.</p>
+                        </div>
+                        <br>
+                        <button onclick="AddToCart('Dog Leash', 15)" class="buy-button">BUY!</button>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="adoptadogprev" src="Images/7.png" alt="waldo">
+                        <br><br>
+                        <h1 class="center doginfo">Dog Bowl | 20$</h1>
+                        <br>
+                        <div class="content">
+                            <p>A sturdy bowl for your dog's meals.</p>
+                        </div>
+                        <br>
+                        <button onclick="AddToCart('Dog Bowl', 20)" class="buy-button">BUY!</button>
+                        <br>
+                    </td>
+                    <td>
+                        <img class="adoptadogprev" src="Images/8.png" alt="waldo">
+                        <br><br>
+                        <h1 class="center doginfo">Chew Toy | 10$</h1>
+                        <br>
+                        <div class="content">
+                            <p>A fun chew toy for your dog's entertainment.</p>
+                        </div>
+                        <br>
+                        <button onclick="AddToCart('Chew Toy', 10)" class="buy-button">BUY!</button>
+                        <br>
+                    </td>
+                    <td></td> <!-- Empty cell for alignment -->
+                </tr>
+            </table>
+        </div>
+
+        <footer style="background-color: #343a40; color: #ffffff; padding: 20px; text-align: center;">
+          <p>&copy; 2024 Paw Patrol. All rights reserved.</p>
+      </footer>
+        
+        <script>
+            function AddToCart(item, price) {
+                alert(item + ' has been added to your cart for $' + price);
+            }
+        </script>
+        
+        </body>
+        </html>
+        
+

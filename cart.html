@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Patrol</title>
+    
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+	body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light gray background */
+}
+    /* Navbar styles */
+header{
+    width: 100vw;
+    height: 100px;
+    border-bottom: solid 1px rgba(16, 16, 16, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    background-color: #dc3545;
+
+}
+
+header .inner{
+    width: 1300px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+header .logo{
+    display: table;
+    height: 100%;
+    float: left;
+}
+
+header .logo div{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header .logo img{
+    height: 50px;
+    margin-top: 5px;
+}
+
+header nav{
+    float: right;
+    height: 100%;
+}
+
+header nav span{
+    display: table;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+header nav span:last-of-type{
+    margin-right: 0;
+}
+
+header nav span {
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+header nav a{
+    color: #FFF;
+}
+
+    
+    /* Page content */
+    .content {
+      padding: 16px;
+    }
+    
+    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+    .sticky + .content {
+      padding-top: 60px;
+    }
+
+    .backgroungstuff{
+      outline: 1px solid;
+      margin: 2vw;
+    }
+
+    .adoptadogprev{
+      width: 19vw;
+      height: 19vw;
+      border: 2vw solid #F2F1EB;
+    }
+
+    .collapsible {
+  background-color: #F1E9D2;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1vw;
+
+  outline: #8590BD solid 1px ;
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #F1E9D2;
+  outline: #8590BD solid 1px ;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f7f1df;
+  outline: #8590BD solid 1px ;
+
+  font-size: 1vw;
+}
+
+.center{
+  
+  margin: 0 auto;
+      display: block;
+      text-align: center;
+}
+
+.doginfo{
+  font-size: 2vw;
+}
+
+    .adoptbutton{
+      margin: 0 auto;
+      display: block;
+
+      background-color: #F1E9D2;
+      outline: #8590BD solid 1px ;
+
+      font-size: 2vw;
+
+      width: 8vw;
+      height: 4vw;
+    }
+
+    th, td {
+  padding: 1vw;
+    }
+
+    td{
+      height: 4vw;
+      width: 51vw ;
+    }
+
+
+    .button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+.button3 {border-radius: 8px;}
+button {border-radius: 12px; width: 50vw; height: 4vw; text-align: left;
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-38:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-38:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-38:focus-visible {
+  box-shadow: none;
+}
+  .button5 {border-radius: 50%;}
+
+  #buybutton{
+    width: 10vw;
+	background-color: #dc3545; /* Red button */
+  border: none;
+  color: #ffffff; /* White text */
+  padding: 8px 16px; /* Adjust padding for smaller size */
+  font-size: 14px; /* Adjust font size for smaller size */
+  border-radius: 50px; /* Fully rounded corners */
+  cursor: pointer;
+  margin: 10px 5px; /* Adjust margin to space out buttons */
+  display: inline-block; /* Ensure buttons are aligned inline */
+  text-align: center;
+  }
+
+    </style>
+
+    <script>
+
+    </script>
+
+</head>
+<body>
+	
+	<header>
+    <div class="inner">
+        <div class="logo">
+            <div>
+                <a href="index.html"><img src="Images/finallogo.png" alt="logo"></a>
+            </div>
+        </div>
+
+        <nav>
+          <span><a id="cartstatus" href="cart.html"> CART </a></span>
+          <span><a href="account.html"> ACCOUNT </a></span>
+        </nav>
+    </div>
+	</header>
+	
+	
+    <div id="cart">
+	<br>
+
+    <h1>&nbsp;&nbsp;My Cart</h1>
+        
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <script>
+
+      accountsetup = localStorage.getItem("pawpatrol-fname") != undefined && localStorage.getItem("pawpatrol-addr") !=undefined && localStorage.getItem("pawpatrol-email") != undefined
+
+      custname =localStorage.getItem("pawpatrol-fname") 
+      custaddr =localStorage.getItem("pawpatrol-addr")
+      custemail=localStorage.getItem("pawpatrol-email")
+
+      if (accountsetup){
+        }else{
+        alert("Please set account info first!")
+        window.location.href = (window.location.href).replace("cart.html", "account.html")
+        }
+
+      cart = []
+
+      if(accountsetup){
+
+        if(JSON.parse(localStorage.getItem("pawpatrol-cart")) == null){
+          cart = []
+        }else{
+        cart = JSON.parse(localStorage.getItem("pawpatrol-cart"))
+        } 
+      }else{
+        cart = []
+      }
+
+
+      document.getElementById("cartstatus").innerHTML = "My Cart ("+cart.length+")"
+      
+      console.log(cart)
+
+      function Removefromtable(thing){
+        var name = thing.id.toString()
+
+        console.log(name)
+
+        document.getElementById(name+".parent").remove()
+
+        cart.splice(cart.indexOf(name))
+
+        localStorage.setItem("pawpatrol-cart", JSON.stringify(cart))
+
+        console.log(cart)
+
+        document.getElementById("cartstatus").innerHTML = "My Cart ("+cart.length+")"
+      }
+
+      function addToTable(text){
+
+            text = text.toString()
+                
+            var tr = document.getElementById("cart").appendChild(document.createElement('tr'))
+            var td = tr.appendChild(document.createElement('td'));
+            var bu = td.appendChild(document.createElement('button'));
+            bu.innerText = text+" (Click to remove from cart)"
+            tr.setAttribute("id", text.toString()+".parent")
+            bu.setAttribute("id", text)
+            bu.setAttribute("onclick", "Removefromtable(this)")
+        }
+
+        function Purchase(){
+            window.location.href = "http://sirjm.infinityfreeapp.com/checkout.php?cust_name="+encodeURIComponent(custname)+"&cust_email="+encodeURIComponent(custemail)+"&cust_addr="+encodeURIComponent(custaddr)+"&cust_order="+encodeURIComponent(JSON.stringify(cart))
+        }
+
+        for(i = 0; i<cart.length+1; i++){
+
+            if(i<cart.length){
+            addToTable(cart[i].prod_name + " | $" + cart[i].prod_price/57)
+            }else{
+
+                text = "Confirm purchase!"
+
+                var tr = document.getElementById("cart").appendChild(document.createElement('tr'))
+                var td = tr.appendChild(document.createElement('td'));
+                var bu = td.appendChild(document.createElement('button'));
+                bu.innerText = text
+                bu.setAttribute("id", "buybutton")
+                bu.setAttribute("onclick", "Purchase()")
+            }
+
+
+        }
+
+
+    </script>
+
+</body>
+</html>
